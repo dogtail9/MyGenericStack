@@ -88,5 +88,23 @@ namespace MyGenericStack.UnitTests
             Assert.AreEqual(item2, result1);
             Assert.AreEqual(expectedCount, stack.Count);
         }
+
+        [TestMethod]
+        public void PeekMessage()
+        {
+            // Arrange
+            var expectedCount = 1;
+            var item = "Hello World!";
+
+            var stack = new MyStack<string>();
+            stack.Push(item);
+
+            // Act
+            var value = stack.Peek();
+
+            // Assert
+            Assert.AreEqual(item, value);
+            Assert.AreEqual(expectedCount, stack.Count);
+        }
     }
 }
