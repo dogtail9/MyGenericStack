@@ -33,6 +33,9 @@ namespace MyGenericStack
 
         public T Peek()
         {
+            if (_list.Count < 1)
+                throw new InvalidOperationException("Stack empty.");
+
             int index = _list.Count - 1;
             T item = _list[index];
 
