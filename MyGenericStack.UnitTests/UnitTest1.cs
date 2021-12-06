@@ -6,8 +6,16 @@ namespace MyGenericStack.UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CreateStack()
         {
+            // Arrange
+            var expected = typeof(MyStack<string>);
+
+            // Act
+            var stack = new MyStack<string>();
+
+            // Assert
+            Assert.IsInstanceOfType(stack, expected);
         }
     }
 }
