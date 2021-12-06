@@ -22,5 +22,12 @@ namespace MyGenericStack
         {
             _list.Add(item);
         }
+
+        public T Pop()
+        {
+            T item = _list[0];
+            _list.RemoveAt(0);
+            return item;
+        }
     }
 }
