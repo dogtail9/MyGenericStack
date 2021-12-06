@@ -31,5 +31,22 @@ namespace MyGenericStack.UnitTests
             // Assert
             Assert.AreEqual(expected, stack.Count);
         }
+
+        [TestMethod]
+        public void PushSeveralItemsToTheStack()
+        {
+            // Arrange
+            var expected = 2;
+            var item1 = "Hello World!";
+            var item2 = "Hello World Again!";
+            var stack = new MyStack<string>();
+
+            // Act
+            stack.Push(item1);
+            stack.Push(item2);
+
+            // Assert
+            Assert.AreEqual(expected, stack.Count);
+        }
     }
 }
