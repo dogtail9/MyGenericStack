@@ -121,5 +121,19 @@ namespace MyGenericStack.UnitTests
                 stack.Peek();
             });
         }
+
+        [TestMethod]
+        public void PopEmptyStack()
+        {
+            // Arrange
+            var stack = new MyStack<string>();
+
+            // Assert
+            Assert.ThrowsException<InvalidOperationException>(() =>
+            {
+                // Act
+                stack.Pop();
+            });
+        }
     }
 }
