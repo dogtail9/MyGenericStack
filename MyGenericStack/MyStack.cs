@@ -8,5 +8,17 @@ namespace MyGenericStack
 {
     public class MyStack<T>
     {
+        public int Count 
+        { 
+            get 
+            {
+                return 1;
+            }
+        }
+
+        public void Push(string item)
+        {
+            
+        }
     }
 }
