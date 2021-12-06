@@ -17,5 +17,19 @@ namespace MyGenericStack.UnitTests
             // Assert
             Assert.IsInstanceOfType(stack, expected);
         }
+
+        [TestMethod]
+        public void PushStringToStack()
+        {
+            // Arrange
+            var expected = 1;
+            var stack = new MyStack<string>();
+
+            // Act
+            stack.Push("Hello World!");
+
+            // Assert
+            Assert.AreEqual(expected, stack.Count);
+        }
     }
 }
