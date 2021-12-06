@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace MyGenericStack.UnitTests
 {
@@ -105,6 +106,20 @@ namespace MyGenericStack.UnitTests
             // Assert
             Assert.AreEqual(item, value);
             Assert.AreEqual(expectedCount, stack.Count);
+        }
+
+        [TestMethod]
+        public void PeekEmptyStack()
+        {
+            // Arrange
+            var stack = new MyStack<string>();
+
+            // Assert
+            Assert.ThrowsException<InvalidOperationException>(() =>
+            {
+                // Act
+                stack.Peek();
+            });
         }
     }
 }
