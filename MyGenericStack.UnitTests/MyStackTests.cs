@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace MyGenericStack.UnitTests
 {
@@ -129,6 +130,41 @@ namespace MyGenericStack.UnitTests
             var stack = new MyStack<string>();
 
             // Assert
+            Assert.ThrowsException<InvalidOperationException>(() =>
+            {
+                // Act
+                stack.Pop();
+            });
+        }
+
+        [TestMethod]
+        public void TestBuiltInStack()
+        {
+            // Create a stack
+            Stack<string> stack = new Stack<string>();
+
+            // Push an item to the stack
+            stack.Push("Hello World!");
+
+            // Peek the stack
+            string itemPeek = stack.Peek();
+
+            // Get the number od items in the stack
+            int count = stack.Count;
+            
+            // The number of items in the stack should be 1
+            Assert.AreEqual(1, count);
+
+            // Pop the stack
+            string itemPop = stack.Pop();
+
+            // The peek and pop item should be the same object
+            Assert.AreEqual(itemPeek, itemPop);
+
+            // There should not be any items in the stack
+            Assert.AreEqual(0, stack.Count);
+
+            // If we pop an empty stack it will throw
             Assert.ThrowsException<InvalidOperationException>(() =>
             {
                 // Act
