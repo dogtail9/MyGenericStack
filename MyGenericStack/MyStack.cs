@@ -31,5 +31,13 @@ namespace MyGenericStack
 
             return item;
         }
+
+        public T Peek()
+        {
+            int index = _list.Count - 1;
+            T item = _list[index];
+
+            return item;
+        }
     }
 }
