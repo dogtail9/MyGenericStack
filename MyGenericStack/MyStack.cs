@@ -8,17 +8,19 @@ namespace MyGenericStack
 {
     public class MyStack<T>
     {
+        List<T> _list = new List<T>();
+
         public int Count 
         { 
             get 
             {
-                return 1;
+                return _list.Count;
             }
         }
 
-        public void Push(string item)
+        public void Push(T item)
         {
-            
+            _list.Add(item);
         }
     }
 }
