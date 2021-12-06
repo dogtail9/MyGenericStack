@@ -25,8 +25,10 @@ namespace MyGenericStack
 
         public T Pop()
         {
-            T item = _list[0];
-            _list.RemoveAt(0);
+            int index = _list.Count - 1;
+            T item = _list[index];
+            _list.RemoveAt(index);
+
             return item;
         }
     }
