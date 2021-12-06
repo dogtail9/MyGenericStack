@@ -7,6 +7,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGenericStack", "MyGeneric
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGenericStack.UnitTests", "MyGenericStack.UnitTests\MyGenericStack.UnitTests.csproj", "{B9D143CD-287C-4CFC-96EB-DEDE39D0871D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15A276A5-8090-435F-B932-F6D9126602F7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Stack.drawio = Stack.drawio
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{9A46F617-CA85-420C-88C1-4BFB7B339FD9}"
+	ProjectSection(SolutionItems) = preProject
+		Images\PeekBlue.png = Images\PeekBlue.png
+		Images\PopBlue.png = Images\PopBlue.png
+		Images\PopGreen.png = Images\PopGreen.png
+		Images\PushBlue.png = Images\PushBlue.png
+		Images\PushGreen.png = Images\PushGreen.png
+		Stack.png = Stack.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +40,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A46F617-CA85-420C-88C1-4BFB7B339FD9} = {15A276A5-8090-435F-B932-F6D9126602F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E6E9777-E8D0-4BC3-ABFC-E300515A9ED6}
